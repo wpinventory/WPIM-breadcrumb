@@ -33,6 +33,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function activate_wpim_breadcrumb() {
+	$min_version = '1.3.2';
+	if ( ! WPIMCore::check_version( $min_version, 'Inventory Breadcrumb Integration' ) ) {
+		return;
+	}
 	add_action( 'wpim_core_loaded', 'launch_wpim_breadcrumb' );
 }
 

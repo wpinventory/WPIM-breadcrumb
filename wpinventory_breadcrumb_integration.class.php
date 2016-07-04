@@ -45,25 +45,12 @@ Class WPIMBreadCrumbIntegration extends WPIBreadcrumbCore {
 	private static $item_url = NULL;
 	private static $item_name = NULL;
 
-	private static $config_rendered = FALSE;
-
 	/**
-	 * First call.  Continues only if Inventory Manager is Installed
+	 * Set everything up.
 	 */
 	public static function start() {
-		// Only initializes this class if WP Inventory Manager is running / loaded
-		add_action( 'wpim_core_loaded', array( __CLASS__, 'initialize' ) );
-		// This has to be here in order to fire in time
 		add_filter( 'wpim_default_config', array( __CLASS__, 'wpim_default_config' ) );
-	}
-
-	/**
-	 * Initialize the plugin to hook into the relevant actions / filters
-	 */
-	public static function initialize() {
 		add_action( 'wpim_edit_settings_general', array( __CLASS__, 'wpim_edit_settings' ) );
-		// Added for backwards compatibility (1.2.4 and on will use action above)
-		add_action( 'wpim_edit_settings', array( __CLASS__, 'wpim_edit_settings' ) );
 
 		add_action( 'init', array( __CLASS__, 'init' ) );
 		// Only set up the front-end hooks if we're not in the admin dashboard
@@ -108,11 +95,6 @@ Class WPIMBreadCrumbIntegration extends WPIBreadcrumbCore {
 	 * Displays the WPIM Admin Settings (selecting the breadcrumb name field)
 	 */
 	public static function wpim_edit_settings() {
-		// Since we have two hooks (for backwards compatibility), don't draw this twice!
-		if ( self::$config_rendered ) {
-			return;
-		}
-
 		self::load_settings();
 
 		$fields          = WPIMAdmin::getDisplay( 'detail' );
@@ -121,11 +103,7 @@ Class WPIMBreadCrumbIntegration extends WPIBreadcrumbCore {
 			$dropdown_fields[ $field ] = WPIMLabel::get_label( $field );
 		}
 
-		if ( current_action() === 'wpim_edit_settings' ) {
-			echo '<h3>' . self::__( 'Breadcrumb Settings' ) . '</h3>';
-			echo '<table class="form-table">';
-		}
-
+		echo '<tr class="subtab"><th colspan="2"><h4>' . self::__('Breadcrumb Integration') . '</h4></th></tr>';
 		echo '<tr><th>' . self::__( 'Breadcrumb Name Field' ) . '</th>';
 		echo '<td>';
 		echo WPIMAdmin::dropdown_array( self::$config_key_name_field, self::$name_field, $dropdown_fields );
@@ -144,12 +122,6 @@ Class WPIMBreadCrumbIntegration extends WPIBreadcrumbCore {
 			self::_e( 'Note - The WP Inventory Breadcrumbs Inegration plugin is designed to work with either NavXT or Yoast SEO breadcrumb plugins, which are not currently installed.' );
 		}
 		echo '</td>';
-
-		if ( current_action() === 'wpim_edit_settings' ) {
-			echo ' </table > ';
-		}
-
-		self::$config_rendered = TRUE;
 	}
 
 	/**
