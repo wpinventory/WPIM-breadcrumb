@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Inventory Breadcrumb Integration Add On\n"
 "POT-Creation-Date: 2016-07-04 14:10-0600\n"
-"PO-Revision-Date: 2016-07-04 14:10-0600\n"
+"PO-Revision-Date: 2016-07-25 13:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -22,19 +22,20 @@ msgstr ""
 
 #: wpinventory_breadcrumb_integration.class.php:106
 msgid "Breadcrumb Integration"
-msgstr "Integración de migas de pan"
+msgstr "Integración de migajas de pan"
 
 #: wpinventory_breadcrumb_integration.class.php:107
 msgid "Breadcrumb Name Field"
-msgstr "Campo de nombre de migas de pan"
+msgstr "Campo de nombre de migajas de pan"
 
 #: wpinventory_breadcrumb_integration.class.php:111
 msgid ""
 "Is this list missing fields? These are only the fields you have set to show "
 "in the Display settings under \"Detail Display\""
 msgstr ""
-"¿Es esta lista de campos que faltan? Estos son sólo los campos que ha "
-"definido en la configuración de visualización en pantalla de\"detalle\""
+"¿Faltan campos en esta lista? Estos son sólo los campos que ha definido para "
+"mostrar en la configuración de visualización en la opción de \"Detalle de "
+"visualización\""
 
 #: wpinventory_breadcrumb_integration.class.php:113
 msgid ""
@@ -42,19 +43,20 @@ msgid ""
 "Advanced Inventory Types that you have set up. The system will automatically "
 "pick up the field that is the default \"Name\""
 msgstr ""
-"Tenga en cuenta que esta lista no permite seleccionar el campo\"Mostrar\" "
-"para todo tipo inventario avanzado que ha configurado. El sistema recogerá "
+"Tenga en cuenta que esta lista no permite seleccionar \"Mostrar campo\" para "
+"todo tipo inventario avanzado que ha configurado. El sistema seleccionará "
 "automáticamente el campo que es el valor predeterminado \"Nombre\""
 
 #: wpinventory_breadcrumb_integration.class.php:118
 msgid "For help displaying breadcrumbs, please see NavXT Breadcrumb support."
-msgstr "Para ayuda con migas de pan, por favor ver NavXT Breadcrumb apoyo."
+msgstr "Para ayuda con migajas de pan, por favor ver NavXT Breadcrumb soporte."
 
 #: wpinventory_breadcrumb_integration.class.php:120
 msgid ""
 "For help displaying breadcrumbs, please see Yoast SEO Breadcrumb support"
 msgstr ""
-"Para ayuda con migas de pan, por favor ver Yoast SEO contenido de apoyo"
+"Para ayuda al motrar migajas de pan, por favor ver el contenido de apoyo "
+"Yoast SEO"
 
 #: wpinventory_breadcrumb_integration.class.php:122
 msgid ""
@@ -62,29 +64,29 @@ msgid ""
 "with either NavXT or Yoast SEO breadcrumb plugins, which are not currently "
 "installed."
 msgstr ""
-"Nota: el plugin de WP inventario pan rallado Inegration está diseñado para "
-"trabajar con plugins de breadcrumb NavXT o SEO Yoast, que actualmente no "
-"están instalados."
+"Nota: el plugin de WP inventario integración de migajas de pan está diseñado "
+"para trabajar con plugins de breadcrumb NavXT o SEO Yoast, que actualmente "
+"no están instalados."
 
 #. Plugin Name of the plugin/theme
 msgid "WP Inventory Breadcrumb Integration Add On"
-msgstr "Añadir inventario WP Breadcrumb integración"
+msgstr "Añadir inventario WP integración de migajas de pan"
 
 #. Plugin URI of the plugin/theme
 msgid "http://www.wpinventory.com"
-msgstr ""
+msgstr "http://www.wpinventory.com"
 
 #. Description of the plugin/theme
 msgid ""
 "Integrates WP Inventory Manager with NavXT Breadcrumbs, Yoast SEO Breadcrumbs"
 msgstr ""
-"Integra gestor de inventario de WP con pan rallado NavXT, SEO Yoast "
-"Breadcrumbs"
+"Integra gestor de inventario de WP con NavXT migajas de pan, SEO Yoast "
+"migajas de pan"
 
 #. Author of the plugin/theme
 msgid "WP Inventory Manager"
-msgstr "Gestor de Inventario"
+msgstr "WP Gestor de Inventario"
 
 #. Author URI of the plugin/theme
 msgid "http://www.wpinventory.com/"
-msgstr ""
+msgstr "http://www.wpinventory.com/"
